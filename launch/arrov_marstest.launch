@@ -1,0 +1,24 @@
+<launch>
+	<param name="use_sim_time"  value="true" />
+	<arg name="use_static_tf" default="true" />
+	<!-- Kalman filter -->
+	<include
+	file = "$(find robot_localization)/launch/arrov_ekf_test.launch"
+	/>
+    <include file = "$(find underwater_odom)/launch/underwater_odom.launch"/>
+	<include file = "$(find imu_transformer)/launch/ned_to_enu.launch"/>
+
+	<!--Static transform from base_link to imu_frame --> 
+
+	<!--<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_imu0" args="0 0 0 0 0 0 base_link imu0" /> -->
+
+
+	<!--Static transform from base_link to DVL_frame --> 
+
+	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL" args="0.0 0.16 -0.11 1.5708 0 3.1416 base_link dvl_link" />
+	
+	<!-- Static transform from base_link to pressure_link -->
+	
+	<!--<node pkg="tf2_ros" type="static_transform_publisher" name="odom_to_Pressure" args="0 0 0 0 0 0 odom pressure_link" />-->
+
+</launch>
