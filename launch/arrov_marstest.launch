@@ -5,7 +5,7 @@
 	<include
 	file = "$(find robot_localization)/launch/arrov_ekf_test.launch"
 	/>
-    <include file = "$(find underwater_odom)/launch/underwater_odom.launch"/>
+    	<include file = "$(find underwater_odom)/launch/underwater_odom.launch"/>
 	<include file = "$(find imu_transformer)/launch/ned_to_enu.launch"/>
 
 	<!--Static transform from base_link to imu_frame --> 

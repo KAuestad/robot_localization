@@ -6,8 +6,8 @@ transform_time_offset: 0.0
 transform_timeout: 0.0
 print_diagnostics: true
 debug: false
-#debug_out_file: /root/manta_auv_backup/debugfiles/debug.txt
 publish_tf: true
+
 publish_acceleration: false
 
 
@@ -38,7 +38,7 @@ imu0_config: [false, false, false, # x, y, z
               false, false, false,  # roll, pitch, yaw
               false, false, false, # vx, vy, vz
               true, true, true,  # vroll, vpitch, vyaw
-              true,true,true]  # ax, ay, az
+              false,false,false]  # ax, ay, az
 imu0_nodelay: false
 imu0_differential: false
 imu0_relative: false #true
@@ -56,7 +56,7 @@ odom0_config: [false,  false, false, # x, y, z
                true, true, true,     # vx, vy, vz
                false, false, false,   # vroll, vpitch, vyaw
                false, false, false]  # ax, ay, az
-odom0_queue_size: 10
+odom0_queue_size: 1
 odom0_nodelay: false
 odom0_differential: false
 odom0_relative: false
@@ -112,7 +112,7 @@ initial_state: [ 0.0, 0.0, 0.0,
 #twists0_relative: false
 
 
-process_noise_covariance: [0.05, 0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
+process_noise_covariance: [0.001, 0,    0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
                            0,    0.05, 0,    0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
                            0,    0,    0.06, 0,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
                            0,    0,    0,    0.03, 0,    0,    0,     0,     0,    0,    0,    0,    0,    0,    0,
