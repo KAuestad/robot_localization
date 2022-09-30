@@ -17,7 +17,7 @@
 
 	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL" args="0.16 0.0 -0.14 3.1416 3.1416 0 base_link dvl_link" />
 	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL_child" args="0.16 0.0 -0.14 3.1416 3.1416 0 base_link dvl_link_child" />
-	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_IMU" args="0.06 0.0 -0.08    0.0 0.0 0.0 base_link imu_link" />
+	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_IMU" args="0.06 0.0 -0.08 0.0 0.0 0.0 base_link imu_link" />
 	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_sonar" args="0.30 0.0 0.26 0.0 0.0 0.0 base_link oculus" />
 	
 	<!-- Static transform from base_link to pressure_link -->
