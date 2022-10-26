@@ -15,13 +15,16 @@
 
 	<!--Static transform from base_link to DVL_frame --> 
 
-	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL" args="0.16 0.0 -0.14 3.1416 3.1416 0 base_link dvl_link" />
+	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL" args="0.0 0.0 -0.195 3.1416 3.1416 0 base_link dvl_link" />
 	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL_child" args="0.16 0.0 -0.14 3.1416 3.1416 0 base_link dvl_link_child" />
+	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL_filtered" args="0.16 0.0 -0.14 3.1416 3.1416 0 base_link dvl_link_filtered" />
 	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_IMU" args="0.06 0.0 -0.08 0.0 0.0 0.0 base_link imu_link" />
 	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_sonar" args="0.30 0.0 0.26 0.0 0.0 0.0 base_link oculus" />
-	<!--<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_vectornav" args="0.0 0.0 0.0 0.0 0.0 0.0 base_link vectornav_link"/>--> 
+	<node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_vectornav" args="0.06 0.0 0.054 3.1416 0.0 0.0 base_link vectornav"/>
+	<!-- args="x y z yaw pitch roll from_frame to_frame"-->
+	
 	<!-- Static transform from base_link to pressure_link -->
 	
-	<!--<node pkg="tf2_ros" type="static_transform_publisher" name="odom_to_Pressure" args="0 0 0 0 0 0 odom pressure_link" />-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="odom_to_Pressure" args="0 0 0.15 0 0 0 odom pressure_link" />
 
 </launch>
